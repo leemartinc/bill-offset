@@ -121,11 +121,27 @@ function billsForPayPeriod($lastPaidDate, $nextPaidDate){
     //echo 'Day: ' . $bill->day . ' Amount: ' . $bill->amount . "<br>";
         
     }
-    
+
     $billsToPay[] = $totalAmount;
+    
+    if ($totalAmount > 1700){
+        echo "<span style='color:red;'> Bills are high this pay period </span><br>"
+    }
     
     return $billsToPay;
 }
+
+
+echo "<br>";
+
+
+echo "Todays Date: " . $today;
+
+
+echo "<br>";
+echo "<hr>";
+echo "<br>";
+
 
 $last_lastPayDate_array = billsForPayPeriod($last_2_pay_date, $last_pay_date );
 
@@ -145,7 +161,7 @@ echo "<br>";
 $currentPayDate_array = billsForPayPeriod($last_pay_date, $next_1_pay_date );
 
 echo "<span style='color:forestgreen'> Date: " . date("m/d/Y", $last_pay_date) . "</span><br>";
-echo "<span style='color:forestgreen'> Bills to pay: </span><br>";
+echo "<span style='color:forestgreen'> Bills to pay: </span>";
 echo "<span style='color:forestgreen'>";
 foreach ( $currentPayDate_array as $item){
     if (end($currentPayDate_array) != $item){
