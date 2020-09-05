@@ -1,4 +1,17 @@
-<?php
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Bill Offset</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <?php
 include 'index.html';
 
 
@@ -40,6 +53,7 @@ class Bill
     public $name;
     public $day;
     public $amount;
+    public $href;
 }
 
 $rent = new Bill();
@@ -56,6 +70,11 @@ $heroku = new Bill();
 $heroku->name = 'Heroku';
 $heroku->day = '10';
 $heroku->amount = 7;
+    
+$appliance = new Bill();
+$appliance->name = 'ApplianceWhse';
+$appliance->day = '12';
+$appliance->amount = 50;
 
 $republic = new Bill();
 $republic->name = 'Republic';
@@ -76,6 +95,7 @@ $car_note = new Bill();
 $car_note->name = 'Car Note';
 $car_note->day = '20';
 $car_note->amount = 535;
+$car_note->href = "https://verified.capitalone.com/auth/signin";
 
 $electricity = new Bill();
 $electricity->name = 'Electricity';
@@ -88,7 +108,7 @@ $discord->day = '30';
 $discord->amount = 10;
 
 
-$bills = array($rent, $spotify, $heroku, $republic, $car_insurance, $internet, $car_note, $electricity, $discord);
+$bills = array($rent, $spotify, $heroku, $republic, $car_insurance, $internet, $car_note, $electricity, $discord, $appliance);
 
 function billsForPayPeriod($lastPaidDate, $nextPaidDate){
     
@@ -101,6 +121,7 @@ function billsForPayPeriod($lastPaidDate, $nextPaidDate){
             
             if($bill->day >= date("d", $lastPaidDate) &&  $bill->day < date("d", $nextPaidDate)){
                 
+                //$billsToPay[] = "<span onclick='window.open(\"$bill->href\", \"_blank\");' style='text-decoration: none;'>$bill->name</span>";
                 $billsToPay[] = $bill->name;
                 $totalAmount = $totalAmount + $bill->amount;
                 
@@ -111,6 +132,7 @@ function billsForPayPeriod($lastPaidDate, $nextPaidDate){
             
             if($bill->day >= date("d", $lastPaidDate) || $bill->day < date("d", $nextPaidDate)){
                 
+                //$billsToPay[] = "<span onclick='window.open(\"$bill->href\", \"_blank\");' style='text-decoration: none;'>$bill->name</span>";
                 $billsToPay[] = $bill->name;
                 $totalAmount = $totalAmount + $bill->amount;
                 
@@ -227,3 +249,7 @@ echo "<br>";
 echo "Future Date: " . date("m/d/Y", $next_4_pay_date) . "<br>";
 
 ?>
+
+</body>
+
+</html>
