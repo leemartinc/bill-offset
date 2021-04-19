@@ -81,10 +81,15 @@ $republic->name = 'Republic';
 $republic->day = '20';
 $republic->amount = 160;
 
-$car_insurance = new Bill();
-$car_insurance->name = 'Car Insurance';
-$car_insurance->day = '20';
-$car_insurance->amount = 451;
+$sal = new Bill();
+$sal->name = 'SAL';
+$sal->day = '13';
+$sal->amount = 81;
+
+$cell_phone = new Bill();
+$cell_phone ->name = 'Cell Phone';
+$cell_phone ->day = '20';
+$cell_phone ->amount = 128;
 
 $internet = new Bill();
 $internet->name = 'Internet';
@@ -108,7 +113,7 @@ $discord->day = '30';
 $discord->amount = 10;
 
 
-$bills = array($rent, $spotify, $heroku, $republic, $car_insurance, $internet, $car_note, $electricity, $discord, $appliance);
+$bills = array($rent, $spotify, $heroku, $republic, $cell_phone , $internet, $car_note, $electricity, $discord, $appliance, $sal);
 
 function billsForPayPeriod($lastPaidDate, $nextPaidDate){
     
