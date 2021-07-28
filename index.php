@@ -76,10 +76,10 @@ $appliance->name = 'ApplianceWhse';
 $appliance->day = '12';
 $appliance->amount = 50;
 
-$republic = new Bill();
-$republic->name = 'Republic';
-$republic->day = '20';
-$republic->amount = 160;
+$oneMain = new Bill();
+$oneMain->name = 'OneMain';
+$oneMain->day = '7';
+$oneMain->amount = 333;
 
 $sal = new Bill();
 $sal->name = 'SAL';
@@ -98,8 +98,8 @@ $internet->amount = 60;
 
 $car_note = new Bill();
 $car_note->name = 'Car Note';
-$car_note->day = '20';
-$car_note->amount = 535;
+$car_note->day = '6';
+$car_note->amount = 432;
 $car_note->href = "https://verified.capitalone.com/auth/signin";
 
 $electricity = new Bill();
@@ -113,7 +113,7 @@ $discord->day = '30';
 $discord->amount = 10;
 
 
-$bills = array($rent, $spotify, $heroku, $republic, $cell_phone , $internet, $car_note, $electricity, $discord, $appliance, $sal);
+$bills = array($rent, $spotify, $heroku, $oneMain, $cell_phone , $internet, $car_note, $electricity, $discord, $appliance, $sal);
 
 function billsForPayPeriod($lastPaidDate, $nextPaidDate){
     
