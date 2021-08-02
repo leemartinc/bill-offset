@@ -78,7 +78,7 @@ $appliance->amount = 50;
 
 $oneMain = new Bill();
 $oneMain->name = 'OneMain';
-$oneMain->day = '7';
+$oneMain->day = '20';
 $oneMain->amount = 333;
 
 $sal = new Bill();
