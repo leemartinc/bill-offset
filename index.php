@@ -98,7 +98,7 @@ $internet->amount = 60;
 
 $car_note = new Bill();
 $car_note->name = 'Car Note';
-$car_note->day = '6';
+$car_note->day = '20';
 $car_note->amount = 432;
 $car_note->href = "https://verified.capitalone.com/auth/signin";
 
