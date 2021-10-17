@@ -70,11 +70,6 @@ $heroku = new Bill();
 $heroku->name = 'Heroku';
 $heroku->day = '10';
 $heroku->amount = 7;
-    
-$appliance = new Bill();
-$appliance->name = 'ApplianceWhse';
-$appliance->day = '12';
-$appliance->amount = 50;
 
 $oneMain = new Bill();
 $oneMain->name = 'OneMain';
@@ -94,7 +89,7 @@ $cell_phone ->amount = 128;
 $internet = new Bill();
 $internet->name = 'Internet';
 $internet->day = '14';
-$internet->amount = 60;
+$internet->amount = 96;
 
 $car_note = new Bill();
 $car_note->name = 'Car Note';
@@ -113,7 +108,7 @@ $discord->day = '30';
 $discord->amount = 10;
 
 
-$bills = array($rent, $spotify, $heroku, $oneMain, $cell_phone , $internet, $car_note, $electricity, $discord, $appliance, $sal);
+$bills = array($rent, $spotify, $heroku, $oneMain, $cell_phone , $internet, $car_note, $electricity, $discord, $sal);
 
 function billsForPayPeriod($lastPaidDate, $nextPaidDate){
     
@@ -151,7 +146,7 @@ function billsForPayPeriod($lastPaidDate, $nextPaidDate){
 
     $billsToPay[] = $totalAmount;
     
-    if ($totalAmount > 1700){
+    if ($totalAmount > 2000){
         echo "<span style='color:red;'> Bills are high this pay period </span><br>";
     }
     
