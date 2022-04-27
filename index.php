@@ -23,7 +23,7 @@ function daysBetween($startDate, $endDate) {
     return abs(round($diff / 86400));
 } 
 
-$demarcationdate = "10/11/2019";
+$demarcationdate = "04/01/2022";
 $today = date("m/d/Y");
 $days = daysBetween($demarcationdate, $today);
 
