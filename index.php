@@ -59,7 +59,7 @@ class Bill
 $rent = new Bill();
 $rent->name = 'Rent';
 $rent->day = '1';
-$rent->amount = 1561;
+$rent->amount = 1700;
 
 $spotify = new Bill();
 $spotify->name = 'Spotify';
@@ -97,18 +97,13 @@ $car_note->day = '20';
 $car_note->amount = 700;
 $car_note->href = "https://verified.capitalone.com/auth/signin";
 
-$Utilities = new Bill();
-$Utilities->name = 'Utilities';
-$Utilities->day = '27';
-$Utilities->amount = 150;
-
-$discord = new Bill();
-$discord->name = 'Discord';
-$discord->day = '30';
-$discord->amount = 10;
+// $Utilities = new Bill();
+// $Utilities->name = 'Utilities';
+// $Utilities->day = '27';
+// $Utilities->amount = 150;
 
 
-$bills = array($rent, $spotify, $heroku, $oneMain, $cell_phone , $internet, $car_note, $Utilities, $discord, $sal);
+$bills = array($rent, $spotify, $heroku, $oneMain, $cell_phone , $internet, $car_note, $sal);
 
 function billsForPayPeriod($lastPaidDate, $nextPaidDate){
     
