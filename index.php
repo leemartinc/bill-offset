@@ -76,15 +76,15 @@ $oneMain->name = 'OneMain Loan';
 $oneMain->day = '20';
 $oneMain->amount = 333;
 
-$cell_phone = new Bill();
-$cell_phone ->name = 'Jag Repair Loan';
-$cell_phone ->day = '15';
-$cell_phone ->amount = 476;
+$jag_repair_loan = new Bill();
+$jag_repair_loan ->name = 'Jag Repair Loan';
+$jag_repair_loan ->day = '15';
+$jag_repair_loan ->amount = 476;
 
-$cell_phone = new Bill();
-$cell_phone ->name = 'Car Insurance';
-$cell_phone ->day = '22';
-$cell_phone ->amount = 247;
+$car_insurance = new Bill();
+$car_insurance ->name = 'Car Insurance';
+$car_insurance ->day = '22';
+$car_insurance ->amount = 247;
 
 $internet = new Bill();
 $internet->name = 'Internet';
@@ -98,7 +98,7 @@ $car_note->amount = 1000;
 $car_note->href = " ";
 
 
-$bills = array($rent, $spotify, $heroku, $oneMain, $cell_phone , $internet, $car_note, $sal);
+$bills = array($rent, $spotify, $heroku, $oneMain, $jag_repair_loan , $internet, $car_note, $car_insurance);
 
 function billsForPayPeriod($lastPaidDate, $nextPaidDate){
     
