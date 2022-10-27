@@ -72,19 +72,19 @@ $heroku->day = '10';
 $heroku->amount = 7;
 
 $oneMain = new Bill();
-$oneMain->name = 'OneMain';
+$oneMain->name = 'OneMain Loan';
 $oneMain->day = '20';
 $oneMain->amount = 333;
 
-$sal = new Bill();
-$sal->name = 'SAL';
-$sal->day = '13';
-$sal->amount = 81;
+$cell_phone = new Bill();
+$cell_phone ->name = 'Jag Repair Loan';
+$cell_phone ->day = '15';
+$cell_phone ->amount = 476;
 
 $cell_phone = new Bill();
-$cell_phone ->name = 'Cell Phone';
-$cell_phone ->day = '20';
-$cell_phone ->amount = 143;
+$cell_phone ->name = 'Car Insurance';
+$cell_phone ->day = '22';
+$cell_phone ->amount = 247;
 
 $internet = new Bill();
 $internet->name = 'Internet';
@@ -94,13 +94,8 @@ $internet->amount = 96;
 $car_note = new Bill();
 $car_note->name = 'Car Note';
 $car_note->day = '20';
-$car_note->amount = 700;
-$car_note->href = "https://verified.capitalone.com/auth/signin";
-
-// $Utilities = new Bill();
-// $Utilities->name = 'Utilities';
-// $Utilities->day = '27';
-// $Utilities->amount = 150;
+$car_note->amount = 1000;
+$car_note->href = " ";
 
 
 $bills = array($rent, $spotify, $heroku, $oneMain, $cell_phone , $internet, $car_note, $sal);
