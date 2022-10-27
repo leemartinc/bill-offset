@@ -136,7 +136,7 @@ function billsForPayPeriod($lastPaidDate, $nextPaidDate){
 
     $billsToPay[] = $totalAmount;
     
-    if ($totalAmount > 2000){
+    if ($totalAmount > 2200){
         echo "<span style='color:red;'> Bills are high this pay period </span><br>";
     }
     
