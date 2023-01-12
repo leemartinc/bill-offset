@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #121212;
+  padding: 2rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #edf2f7;
+  line-height: 1.5;
+}
+
+.easy-grid {
+  display: grid;
+  grid-gap: var(--g, 1rem);
+  grid-template-columns: repeat(auto-fill, minmax(min(var(--m, 20rem), 100%), 1fr));
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  margin: 2rem auto 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top p {
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+.top img {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+.top strong {
+  font-weight: 600;
+}
+.top small {
+  font-size: 0.7rem;
+  position: relative;
+  top: -1rem;
+}
+.top small a {
+  color: #0284c7;
+  font-weight: 600;
+}
+
+.example-block {
+  background: #1e1e1e;
+  border-radius: 0.5rem;
+  min-height: 10rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding:20px;
+}
