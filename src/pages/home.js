@@ -149,7 +149,7 @@ function Home() {
                         {new Date()< new Date(payPeriods[i+1]) && new Date() > new Date(payPeriods[i])
                         ? <div style={{backgroundColor:"green", color:"white", padding:"5px", borderRadius:"5px"}}>Current Pay Period</div>
                         : <div></div>}
-                       <table style={{width:"100%"}}>
+                       <table style={{width:"100%"}}> 
                             <th>
                                 <span style={{fontWeight:"900"}}>{new Date(payPeriods[i]).toLocaleDateString()}</span> - {new Date(payPeriods[i+1]).toLocaleDateString()}
                             </th>
